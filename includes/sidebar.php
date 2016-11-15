@@ -13,8 +13,15 @@
 		echo "
 <div class='page-header'>
 <a href='details.php?post=$post_id'>
-<h5 class='text-left'> <span class='glyphicon glyphicon-chevron-right pull-left' aria-hidden='true'></span>
+<h5 class='text-left'> 
+<div class= 'row'>
+<div class= 'col-xs-1'>
+<span class='glyphicon glyphicon-chevron-right pull-left' aria-hidden='true'></span>
+</div>
+<div class= 'col-xs-11'>
 <strong>$post_title</strong>
+</div>
+</div>
 </h5>
 </a>
 </div>
