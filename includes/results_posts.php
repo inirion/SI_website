@@ -1,16 +1,20 @@
 <?php
 $post_keywords = $_GET['search'];
-$get_posts = "select * from posts where post_keywords = '$post_keywords'";
-		$run_posts = mysql_query($get_posts);
-		while ($row_posts = mysql_fetch_array($run_posts)) {
-			$post_id = $row_posts['post_id'];
-			$post_title = html_entity_decode($row_posts['post_title'], ENT_QUOTES, "ISO-8859-1");
-			$post_date = $row_posts['post_date'];
-			$post_image = html_entity_decode($row_posts['post_image'], ENT_QUOTES, "ISO-8859-1");
-			$post_author = html_entity_decode($row_posts['post_author'], ENT_QUOTES, "ISO-8859-1");
-			$post_content = html_entity_decode($row_posts['post_content'], ENT_QUOTES, "ISO-8859-1");
-			$post_description = html_entity_decode($row_posts['post_description'], ENT_QUOTES, "ISO-8859-1");
-			echo "
+$get_posts = "select * from posts where post_keywords like '%$post_keywords%'";
+$run_posts = mysql_query($get_posts);
+echo"<hgroup class='mb20'>
+		<h1>Search Results</h1>
+		<h2 class='lead''><strong class='text-danger'>".mysql_num_rows($run_posts)."</strong> results were found for the search for <strong class='text-danger'>".$post_keywords."</strong></h2>								
+	</hgroup>";
+while ($row_posts = mysql_fetch_array($run_posts)) {
+	$post_id = $row_posts['post_id'];
+	$post_title = html_entity_decode($row_posts['post_title'], ENT_QUOTES, "ISO-8859-1");
+	$post_date = $row_posts['post_date'];
+	$post_image = html_entity_decode($row_posts['post_image'], ENT_QUOTES, "ISO-8859-1");
+	$post_author = html_entity_decode($row_posts['post_author'], ENT_QUOTES, "ISO-8859-1");
+	$post_content = html_entity_decode($row_posts['post_content'], ENT_QUOTES, "ISO-8859-1");
+	$post_description = html_entity_decode($row_posts['post_description'], ENT_QUOTES, "ISO-8859-1");
+	echo "
 
 <div class='panel panel-default'>
 
@@ -36,5 +40,5 @@ $post_description
 </div>
 
 </div>";
-		}
+}
 ?>

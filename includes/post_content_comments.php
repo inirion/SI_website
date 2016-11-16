@@ -2,6 +2,8 @@
 <?php
 $get_comments = "select * from comments where post_id = '$post_id' AND comment_status = 'approved'";
 $run_comments = mysql_query($get_comments);
+if(mysql_num_rows($run_comments) != 0 )
+	echo"<h4><strong>Comments :</strong></h4>";
 while ($row_comment = mysql_fetch_array($run_comments)) {
 	$comment_name = html_entity_decode($row_comment['comment_name'], ENT_QUOTES, "ISO-8859-1");
 	$comment_date = $row_comment['comment_date'];
