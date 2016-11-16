@@ -15,9 +15,9 @@
 		<div class="collapse navbar-collapse navHeaderCollapse">
 			<!-- Creation of serchbox start -->
 			<div class="col-sm-3 col-md-3">
-				<form class="navbar-form" role="search" metod="get" action="results.php" enctype="multipart/form-data">
+				<form class="navbar-form" role="search" metod="get" action="index.php" enctype="multipart/form-data">
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search" name="q" required>
+						<input type="text" class="form-control" placeholder="Search" name="search" required>
 						<div class="input-group-btn">
 							<button class="btn btn-default" type="submit">
 								<i class="glyphicon glyphicon-search"></i>

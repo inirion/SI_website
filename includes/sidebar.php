@@ -16,9 +16,9 @@
 <h5 class='text-left'> 
 <div class= 'row'>
 <div class= 'col-xs-1'>
-<span class='glyphicon glyphicon-chevron-right pull-left' aria-hidden='true'></span>
+<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>
 </div>
-<div class= 'col-xs-11'>
+<div class= 'col-xs-10'>
 <strong>$post_title</strong>
 </div>
 </div>
