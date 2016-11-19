@@ -4,7 +4,7 @@
 		<title>News Website</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="refresh" content="0">
+		
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/styles.css" media="all" />
 		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
@@ -142,7 +142,8 @@ if (isset($_POST['submit'])) {
 		$run_posts = mysql_query($insert_posts);
 		if ($run_posts)
 			echo "<script>alert('Post has been published !')</script>";
-		echo "<script>window.open('insert_post.php',_self)</script>";
+		echo "<meta http-equiv='refresh' content='0'>
+		<script>window.open('insert_post.php',_self)</script>";
 	}
 }
 ?>
