@@ -1,4 +1,5 @@
 <?php
+include ("includes/database.php");
 $post_keywords = $_GET['search'];
 $get_posts = "select * from posts where post_keywords like '%$post_keywords%'";
 $run_posts = mysql_query($get_posts);
@@ -41,4 +42,5 @@ $post_description
 
 </div>";
 }
+mysql_close();
 ?>

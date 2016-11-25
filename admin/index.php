@@ -12,7 +12,7 @@
 		<?php include("includes/header.php") ?>
 		<!-- Creating header end -->
 		<!-- Creating content start -->
-		<?php include("includes/content_home.php") ?>
+		<?php include("includes/content.php") ?>
 		<!-- Creating content end -->
 		<!-- Creating footer start -->
 		<?php include("includes/footer.php") ?>

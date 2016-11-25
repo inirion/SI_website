@@ -3,6 +3,7 @@
 		<h3>Recent Articles</h3>
 	</div>
 	<?php
+	include ("includes/database.php");
 	$get_posts = "select * from posts order by 1 DESC LIMIT 0,5";
 	$run_posts = mysql_query($get_posts);
 	while ($row_posts = mysql_fetch_array($run_posts)) {
@@ -27,6 +28,6 @@
 </div>
 ";
 	}
+	mysql_close();
 	?>
-	
 </div>

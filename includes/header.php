@@ -49,7 +49,9 @@
 							/*reading selected category name and id from database*/
 							echo "<li><a href = 'index.php?category=$category_id'>$category_title</a></li>";
 						}
+						mysql_close();
 						?>
+
 						<!-- Populationg dropdown by categories from database end -->
 					</ul>
 				</li>

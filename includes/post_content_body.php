@@ -1,4 +1,5 @@
 <?php
+include ("includes/database.php");
 if (isset($_GET['post'])) {
 	$post_id = $_GET['post'];
 	$get_posts = "select * from posts where post_id = '$post_id'";
@@ -30,4 +31,5 @@ $post_content
 </div>";
 	}
 }
+mysql_close();
 ?>

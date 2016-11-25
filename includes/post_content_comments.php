@@ -1,5 +1,6 @@
 <!-- Comment -->
 <?php
+include ("includes/database.php");
 $get_comments = "select * from comments where post_id = '$post_id' AND comment_status = 'approved'";
 $run_comments = mysql_query($get_comments);
 if(mysql_num_rows($run_comments) != 0 )
@@ -16,4 +17,5 @@ while ($row_comment = mysql_fetch_array($run_comments)) {
 	</div>
 </div>";
 }
+mysql_close();
 ?>

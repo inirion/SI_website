@@ -1,4 +1,5 @@
 <?php
+include ("includes/database.php");
 $category_id = $_GET['category'];
 $get_posts = "select * from posts where category_id = '$category_id'";
 		$run_posts = mysql_query($get_posts);
@@ -37,4 +38,5 @@ $post_description
 
 </div>";
 		}
+mysql_close();
 ?>

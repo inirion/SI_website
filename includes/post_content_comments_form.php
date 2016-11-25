@@ -25,6 +25,7 @@
 <hr>
 
 <?php
+include ("includes/database.php");
 if (isset($_POST['submit'])) {
 	if ($_POST['name'] == '')
 		$comment_name = htmlentities('Anonymous', ENT_QUOTES);
@@ -43,4 +44,5 @@ if (isset($_POST['submit'])) {
 	}
 	
 }
+mysql_close();
 ?>
