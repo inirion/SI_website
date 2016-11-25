@@ -2,7 +2,9 @@
 	<!-- Header container start -->
 	<div class = "container">
 		<!-- Title or logo of website -->
-		<a href="index.php" class="navbar-brand navbar-left">Admin Panel</a>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.php">Admin panel</a>
+		</div>
 		<!-- Hamburger button start -->
 		<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 			<span class="icon-bar"></span>

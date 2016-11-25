@@ -1,8 +1,10 @@
 <div class="navbar navbar-inverse navbar-static-top">
 	<!-- Header container start -->
-	<div class = "container">
+	<div class = "container-fluid">
 		<!-- Title or logo of website -->
-		<a href="index.php" class="navbar-brand navbar-left">News Site</a>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.php">Name</a>
+		</div>
 		<!-- Hamburger button start -->
 		<button class = "navbar-toggle" data-toggle = "collapse" data-target = " .navHeaderCollapse">
 			<span class="icon-bar"></span>
@@ -10,24 +12,10 @@
 			<span class="icon-bar"></span>
 		</button>
 		<!-- Hamburger button end -->
-		
+
 		<!-- Navigation bar start -->
 		<div class="collapse navbar-collapse navHeaderCollapse">
-			<!-- Creation of serchbox start -->
-			<div class="col-sm-3 col-md-3">
-				<form class="navbar-form" role="search" metod="get" action="index.php" enctype="multipart/form-data">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search" name="search" required>
-						<div class="input-group-btn">
-							<button class="btn btn-default" type="submit">
-								<i class="glyphicon glyphicon-search"></i>
-							</button>
-						</div>
-					</div>
-				</form>
-			</div>
-			<!-- Creation of serchbox end -->
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-nav navbar-left">
 				<li>
 					<a>About</a>
 				</li>
@@ -60,7 +48,18 @@
 					<a>Contact</a>
 				</li>
 			</ul>
-			
+			<!-- Creation of serchbox start -->
+			<form class="navbar-form navbar-right" role="search" metod="get" action="index.php" enctype="multipart/form-data">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search" name="search" required>
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+			<!-- Creation of serchbox end -->
 		</div>
 		<!-- Navigation bar end -->
 	</div>
