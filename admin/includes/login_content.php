@@ -1,9 +1,25 @@
+<?php
+
+if(isset($_POST['submit'])){
+	$login = $_POST['Login'];
+	$password = $_POST['Password'];
+	if($login == 'admin' && $password == 'admin'){
+		echo '<script type="text/javascript">
+		window.location = "../admin/index.php"
+		</script>';
+	}else{
+		echo '<script>alert("Wrong password or login !!")</script>';
+	}
+	
+}
+
+?>
 <div class="container" style="margin-top:10%;">
 	<div class = "row">
-		<form class="form-signin col-sm-4 col-sm-offset-4">
-			<input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
-			<input type="password" class="form-control" placeholder="Password" required="">
-			<button class="btn btn-lg btn-primary btn-block" type="submit">
+		<form class="form-signin col-sm-4 col-sm-offset-4" enctype="multipart/form-data" method="post">
+			<input type="text" name="Login" class="form-control" placeholder="Login" required="" autofocus="">
+			<input type="password" name="Password" class="form-control" placeholder="Password" required="">
+			<button class="btn btn-lg btn-primary btn-block" id="submit" name="submit" type="submit">
 				Login
 			</button>
 		</form>
