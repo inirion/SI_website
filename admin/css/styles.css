@@ -7,3 +7,6 @@
 .featuredImg {
 	margin-bottom: 15px;
 }
+body {
+	padding-bottom: 50px; !important
+}

@@ -127,7 +127,7 @@
 				if ($run_posts)
 					echo "<script>alert('Post has been published !')</script>";
 				echo '<script type="text/javascript">
-		window.location = "../index.php"
+		window.location = "../admin/index.php?view_posts"
 		</script>';
 			}
 		}

@@ -44,4 +44,5 @@
 			?>
 		</tbody>
 	</table>
+	<a href = "index.php?insert_post" class = "btn btn-info pull-right" role="button">New Post</a>
 </div>

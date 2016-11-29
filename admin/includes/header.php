@@ -16,20 +16,11 @@
 		<!-- Navigation bar start -->
 		<div class="collapse navbar-collapse navHeaderCollapse">
 			<ul class="nav navbar-nav navbar-right">
-				<!-- Dropdown in Posts bar start -->
-				<li class = "dropdown">
-					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown">Post<b class = "caret"></b></a>
-					<!-- Creating dropdown effect by adding ul element inside li element -->
-					<ul class="dropdown-menu">
-						<li>
-							<a href = 'index.php?insert_post'>Insert Post</a>
-						</li>
-						<li>
-							<a href = 'index.php?view_posts'>View Posts</a>
-						</li>
-					</ul>
+				<!--Posts start -->
+				<li>
+					<a href = 'index.php?view_posts'>Posts</a>
 				</li>
-				<!-- Dropdown in Posts bar start -->
+				<!-- Posts ends -->
 				<!-- Dropdown in Category bar start -->
 				<li class = "dropdown">
 					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown">Category<b class = "caret"></b></a>
