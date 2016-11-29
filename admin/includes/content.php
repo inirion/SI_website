@@ -5,5 +5,7 @@
 		include('view_posts.php');
 	}else if(isset($_GET['edit_post'])){
 		include('edit_post.php');
+	}else if(isset($_GET['logout'])){
+		include('logout.php');
 	}
 ?>

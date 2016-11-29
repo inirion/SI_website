@@ -1,14 +1,17 @@
 <?php
-
+session_start(); 
 if(isset($_POST['submit'])){
 	$login = $_POST['Login'];
 	$password = $_POST['Password'];
 	if($login == 'admin' && $password == 'admin'){
+		$_SESSION['user'] = 'admin';
 		echo '<script type="text/javascript">
 		window.location = "../admin/index.php"
 		</script>';
 	}else{
+		session_destroy();
 		echo '<script>alert("Wrong password or login !!")</script>';
+		
 	}
 	
 }
