@@ -41,7 +41,7 @@ if(!defined('MyConst')) {
 				?>
 				</th>
 				<th class="text-center"><a href="index.php?edit_post=<?php echo $post_id;?>" class="btn btn-success" role="button">Edit</a></th>
-				<th class="text-center"><a href="includes/delete_post.php?delete_post=<?php echo $post_id;?>" class="btn btn-danger" role="button">Delete</a></th>
+				<th class="text-center"><a href="index.php?delete_post=<?php echo $post_id;?>" class="btn btn-danger" role="button">Delete</a></th>
 			</tr>
 			<?php
 			}

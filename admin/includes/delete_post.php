@@ -13,7 +13,7 @@ if(!defined('MyConst')) {
 		
 		echo "<script>alert('Post has been deleted !')</script>";
 				echo '<script type="text/javascript">
-		window.location = "../index.php?view_posts"
+		window.location = "../admin/index.php?view_posts"
 		</script>';
 	}
 	mysql_close();
