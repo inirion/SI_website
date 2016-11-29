@@ -1,3 +1,8 @@
+<?php
+if(!defined('MyConst')) {
+   die('Direct access not permitted');
+}
+?>
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 <script>
 	tinymce.init({

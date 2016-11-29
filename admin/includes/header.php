@@ -1,3 +1,8 @@
+<?php
+if(!defined('MyConst')) {
+   die('Direct access not permitted');
+}
+?>
 <div class="navbar navbar-inverse navbar-static-top">
 	<!-- Header container start -->
 	<div class = "container">

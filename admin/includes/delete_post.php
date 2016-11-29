@@ -1,4 +1,9 @@
 <?php
+if(!defined('MyConst')) {
+   die('Direct access not permitted');
+}
+?>
+<?php
 	include('database.php');
 	
 	if(isset($_GET['delete_post'])){

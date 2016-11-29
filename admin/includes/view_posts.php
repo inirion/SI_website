@@ -1,3 +1,8 @@
+<?php
+if(!defined('MyConst')) {
+   die('Direct access not permitted');
+}
+?>
 <div class="container">
 	<table class="table table-hover table-bordered text-center">
 		<thead>

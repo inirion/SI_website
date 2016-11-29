@@ -9,7 +9,10 @@
 	</head>
 	<body>
 		<!-- Creating content start -->
-		<?php include("includes/login_content.php")
+
+		<?php
+define('MyConst', TRUE);
+include("includes/login_content.php")
 		?>
 		<!-- Creating content end -->
 		<!-- Import needed JavaScript plugins -->
