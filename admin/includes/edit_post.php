@@ -17,7 +17,6 @@ if (isset($_GET['edit_post'])) {
 	$run_posts = mysql_query($get_posts);
 
 	while ($posts_row = mysql_fetch_array($run_posts)) {
-		html_entity_decode($posts_row['post_description'], ENT_QUOTES, "ISO-8859-1");
 		$post_id = $posts_row['post_id'];
 		$post_title = html_entity_decode($posts_row['post_title'], ENT_QUOTES, "ISO-8859-1");
 		$post_category = $posts_row['category_id'];

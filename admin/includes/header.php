@@ -26,20 +26,11 @@ if(!defined('MyConst')) {
 					<a href = 'index.php?view_posts'>Posts</a>
 				</li>
 				<!-- Posts ends -->
-				<!-- Dropdown in Category bar start -->
-				<li class = "dropdown">
-					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown">Category<b class = "caret"></b></a>
-					<!-- Creating dropdown effect by adding ul element inside li element -->
-					<ul class="dropdown-menu">
-						<li>
-							<a href = 'index.php?insert_category'>Insert Category</a>
-						</li>
-						<li>
-							<a href = 'index.php?view_categories'>View Categories</a>
-						</li>
-					</ul>
+				<!-- Category start -->
+				<li>
+					<a href = 'index.php?view_categories'>Categories</a>
 				</li>
-				<!-- Dropdown in Category bar start -->
+				<!-- Category end -->
 				<li>
 					<a href = 'index.php?view_comments'>View Comments</a>
 				</li>
