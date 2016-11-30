@@ -1,8 +1,11 @@
 <?php
 if(!defined('MyConst')) {
    die('Direct access not permitted');
-}
+}else{
 ?>
+<div class="alert alert-danger text-center" role="alert">
+  <strong>Warning !</strong> Deletion of category will delete all posts published on this category.
+</div>
 <div class="container">
 	<table class="table table-hover table-bordered text-center">
 		<thead>
@@ -37,3 +40,4 @@ if(!defined('MyConst')) {
 	</table>
 	<a href = "index.php?insert_category" class = "btn btn-info pull-right" role="button">New Category</a>
 </div>
+<?php } ?>
