@@ -12,7 +12,7 @@ while ($row_comment = mysql_fetch_array($run_comments)) {
 	echo "
 	<div class='media'>
 	<div class='media-body' style = 'padding-bottom:20px;'>
-		<h4 class='media-heading'>$comment_name <small>$comment_date</small></h4>
+		<h4 class='media-heading'>$comment_name <small> on $comment_date</small></h4>
 		$comment_text
 	</div>
 </div>";

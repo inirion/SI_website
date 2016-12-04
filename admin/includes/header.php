@@ -32,7 +32,7 @@ if(!defined('MyConst')) {
 				</li>
 				<!-- Category end -->
 				<li>
-					<a href = 'index.php?view_comments'>View Comments</a>
+					<a href = 'index.php?view_comments'>Comments</a>
 				</li>
 				<li>
 					<a href = 'index.php?logout'>Logout</a>

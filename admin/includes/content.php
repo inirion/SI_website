@@ -20,6 +20,13 @@ if (!defined('MyConst')) {
 		include ('delete_category.php');
 	} else if (isset($_GET['edit_category'])) {
 		include ('edit_category.php');
+	} else if (isset($_GET['view_comments'])) {
+		include ('view_comments.php');
+	} else if (isset($_GET['change_comment_status'])) {
+		include ('change_comment_status.php');
+	} else if (isset($_GET['delete_comment'])) {
+		include ('delete_comment.php');
 	}
+
 }
 ?>
