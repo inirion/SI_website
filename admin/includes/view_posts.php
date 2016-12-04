@@ -1,13 +1,13 @@
 <?php
-if(!defined('MyConst')) {
-   die('Direct access not permitted');
+if (!defined('MyConst')) {
+	die('Direct access not permitted');
 }
 ?>
 <div class="container">
+	<div class="row">
 	<table class="table table-hover table-bordered text-center">
 		<thead>
 			<tr>
-				<th class="text-center">Post ID</th>
 				<th class="text-center">Title</th>
 				<th class="text-center">Author</th>
 				<th class="text-center">Comments</th>
@@ -28,20 +28,19 @@ if(!defined('MyConst')) {
 				$post_image = $posts_row['post_image'];
 			?>
 			<tr>
-				<th class="text-center"><?php echo $post_id;?></th>
-				<th class="text-center"><?php echo $post_title;?></th>
-				<th class="text-center"><?php echo $post_author;?></th>
+				<th class="text-center"><?php echo $post_title; ?></th>
+				<th class="text-center"><?php echo $post_author; ?></th>
 				<th class="text-center">
 				<?php
-				
-					$get_comments = "SELECT * FROM comments where post_id='$post_id'";
-					$run_comments = mysql_query($get_comments);
-					$count = mysql_num_rows($run_comments);
-					echo $count;
+
+				$get_comments = "SELECT * FROM comments where post_id='$post_id'";
+				$run_comments = mysql_query($get_comments);
+				$count = mysql_num_rows($run_comments);
+				echo $count;
 				?>
 				</th>
-				<th class="text-center"><a href="index.php?edit_post=<?php echo $post_id;?>" class="btn btn-success" role="button">Edit</a></th>
-				<th class="text-center"><a href="index.php?delete_post=<?php echo $post_id;?>" class="btn btn-danger" role="button">Delete</a></th>
+				<th class="text-center"><a href="index.php?edit_post=<?php echo $post_id; ?>" class="btn btn-success" role="button">Edit</a></th>
+				<th class="text-center"><a href="index.php?delete_post=<?php echo $post_id; ?>" class="btn btn-danger" role="button">Delete</a></th>
 			</tr>
 			<?php
 			}
@@ -49,5 +48,6 @@ if(!defined('MyConst')) {
 			?>
 		</tbody>
 	</table>
-	<a href = "index.php?insert_post" class = "btn btn-info pull-right" role="button">New Post</a>
+	<a href = "index.php?insert_post" class = "btn btn-info pull-right" role="button" style="margin-bottom: 50px;">New Post</a>
+	</div>
 </div>

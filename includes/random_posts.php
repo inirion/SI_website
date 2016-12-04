@@ -39,9 +39,17 @@ while ($row_posts = mysql_fetch_array($run_posts)) {
 
 	<div class='panel-footer'>
 		<h6>
-			<strong>Category : <?php echo $category_name; ?> </strong>
-			<strong class="pull-right">Posted by : <?php echo $post_author; ?> <small> On <?php echo $post_date; ?></small></strong>
+			
+			
 		</h6>
+		<div class="row">
+			<div class="col-xs-6">
+				<strong>Category : <?php echo $category_name; ?> </strong>
+			</div>
+			<div class="col-xs-6">
+				<strong >Posted by : <?php echo $post_author; ?> <small> On <?php echo $post_date; ?></small></strong>
+			</div>
+		</div>
 	</div>
 
 </div>
