@@ -46,7 +46,7 @@ while ($row_posts = mysql_fetch_array($run_posts)) {
 			<div class="col-xs-6">
 				<strong>Category : <?php echo $category_name; ?> </strong>
 			</div>
-			<div class="col-xs-6">
+			<div class="col-xs-6 text-right">
 				<strong >Posted by : <?php echo $post_author; ?> <small> On <?php echo $post_date; ?></small></strong>
 			</div>
 		</div>
