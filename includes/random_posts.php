@@ -28,7 +28,7 @@ while ($row_posts = mysql_fetch_array($run_posts)) {
 	<div class='panel-body text-left'>
 		<div class ='row'>
 			<div class = 'col-sm-3'>
-				<a href = 'details.php?post='><img class='featuredImg' src='admin/news_img/<?php echo $post_image; ?>' width='100%'></a>
+				<a href = 'details.php?post=<?php echo $post_id; ?>'><img class='featuredImg' src='admin/news_img/<?php echo $post_image; ?>' width='100%'></a>
 			</div>
 			<div class='col-sm-9'>
 				<?php echo $post_description; ?>
