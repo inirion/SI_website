@@ -1,78 +1,76 @@
 <div class="navbar navbar-inverse navbar-static-top">
 	<!-- Header container start -->
 	<div class = "container-fluid">
-		
-			<!-- Title or logo of website -->
-			<div class="navbar-header col-xs-1">
-				<a class="navbar-brand" href="index.php">Home</a>
-			</div>
-			<!-- Hamburger button start -->
-			<button class = "navbar-toggle" data-toggle = "collapse" data-target = " .navHeaderCollapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<!-- Hamburger button end -->
 
-			<!-- Navigation bar start -->
-			<div class="row">
-			<div class="collapse navbar-collapse navHeaderCollapse col-xs-12">
-				<ul class="nav navbar-nav navbar-left col-xs-12">
-					<!-- Dropdown in Navigation bar start -->
-					<?php
-					include ("includes/database.php");
-					$count = 0;
+		<!-- Title or logo of website -->
+		<div class="navbar-heade">
+			<a class="navbar-brand" href="index.php">Home</a>
+		</div>
+		<!-- Hamburger button start -->
+		<button class = "navbar-toggle col-xs-1" data-toggle = "collapse" data-target = " .navHeaderCollapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<!-- Hamburger button end -->
+
+		<!-- Navigation bar start -->
+
+		<div class="collapse navbar-collapse navHeaderCollapse col-xs-12">
+			<ul class="nav navbar-nav navbar-left">
+				<!-- Dropdown in Navigation bar start -->
+				<?php
+				include ("includes/database.php");
+				$count = 0;
+				$get_categories = "Select * from categories";
+				$run_categories = mysql_query($get_categories);
+				while ($categories_row = mysql_fetch_array($run_categories)) {
+					$count++;
+				}
+				if ($count <= 4) {
 					$get_categories = "Select * from categories";
 					$run_categories = mysql_query($get_categories);
 					while ($categories_row = mysql_fetch_array($run_categories)) {
-						$count++;
+						$category_id = $categories_row['category_id'];
+						$category_title = $categories_row['category_title'];
+						echo "<li><a href = 'index.php?category=$category_id'>$category_title</a></li>";
 					}
-					if ($count <= 5) {
-						$get_categories = "Select * from categories";
-						$run_categories = mysql_query($get_categories);
-						while ($categories_row = mysql_fetch_array($run_categories)) {
-							$category_id = $categories_row['category_id'];
-							$category_title = $categories_row['category_title'];
-							echo "<li><a href = 'index.php?category=$category_id'>$category_title</a></li>";
-						}
-					} else {
-						echo '<li class = "dropdown">
+				} else {
+					echo '<li class = "dropdown">
 						<a href="#" class = "dropdown-toggle" data-toggle = "dropdown">Category <b class = "caret"></b></a>
 						<ul class="dropdown-menu">';
 
-						$get_categories = "Select * from categories";
-						$run_categories = mysql_query($get_categories);
-						while ($categories_row = mysql_fetch_array($run_categories)) {
-							$category_id = $categories_row['category_id'];
-							$category_title = $categories_row['category_title'];
-							echo "<li><a href = 'index.php?category=$category_id'>$category_title</a></li>";
-						}
-						echo '</ul></li>';
+					$get_categories = "Select * from categories";
+					$run_categories = mysql_query($get_categories);
+					while ($categories_row = mysql_fetch_array($run_categories)) {
+						$category_id = $categories_row['category_id'];
+						$category_title = $categories_row['category_title'];
+						echo "<li><a href = 'index.php?category=$category_id'>$category_title</a></li>";
 					}
-					mysql_close();
-					?>
-				</ul>
-				</div>
-				</div>
-				<!-- Creation of serchbox start -->
-				<div class="row">
-					<div class="col-xs-offset-1 col-xs-10">
-				<form class="navbar-form navbar-middle" role="search" metod="get" action="index.php" enctype="multipart/form-data">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Search" name="search" required>
-						<div class="input-group-btn">
-							<button class="btn btn-default" type="submit">
-								<i class="glyphicon glyphicon-search"></i>
-							</button>
-						</div>
+					echo '</ul></li>';
+				}
+				mysql_close();
+				?>
+			</ul>
+</div>
+			<!-- Creation of serchbox start -->
+			<div class="pull-right">
+			<form class="navbar-form pull-right" role="search" metod="get" action="index.php" enctype="multipart/form-data">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search" name="search" required>
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
 					</div>
-				</form>
 				</div>
-				</div>
-				<!-- Creation of serchbox end -->
+			</form>
 			</div>
-			<!-- Navigation bar end -->
 		
+		<!-- Creation of serchbox end -->
 	</div>
-	<!-- Header container ends -->
+	<!-- Navigation bar end -->
+
+</div>
+<!-- Header container ends -->
 </div>

@@ -1,6 +1,21 @@
 <?php
 include ("includes/database.php");
-$get_posts = "select * from posts order by rand() LIMIT 0,5";
+if(isset($_GET['page'])){
+	$page = $_GET['page'];
+	if($page <= 0)
+	$page = 1;
+	$num = $page;
+}else{
+	 $page = ' ';
+	 $num = 1;
+}
+	if($page ==' ' || $page == '1'){
+		$page1 = 0;
+	}else{
+		$page1 = ($page*5) - 5;
+	}
+
+$get_posts = "select * from posts LIMIT $page1, 5";
 $run_posts = mysql_query($get_posts);
 while ($row_posts = mysql_fetch_array($run_posts)) {
 	$post_id = $row_posts['post_id'];
@@ -18,7 +33,7 @@ while ($row_posts = mysql_fetch_array($run_posts)) {
 ?>
 
 
-<div class='panel panel-default'>
+<div class='panel panel-default' style="margin-bottom: 50px;">
 
 	<div class='page-header'>
 		<a href = 'details.php?post=<?php echo $post_id; ?>'><h4 class='text-center'><strong><?php echo $post_title; ?></strong></h4></a>
@@ -55,7 +70,32 @@ while ($row_posts = mysql_fetch_array($run_posts)) {
 </div>
 
 <?php
+
+	
 	}
+	$page = mysql_query("select * from posts");
+	$count=mysql_num_rows($page);
+	$a = $count/5;
+	$a=ceil($a);
+	?><div class="row" style="margin-bottom: 50px;">
+		<div class="col-xs-12"><?php
+		if($num - 1 > 0){
+			?><a href="index.php?page=<?php echo $num - 1 ?>">
+				<button type="button" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-arrow-left">
+				</button>
+			</a><?php
+		}
+		if($num + 1 <= $a){
+			?><a href="index.php?page=<?php echo $num + 1 ?>">
+				<button type="button" class="btn btn-default btn-lg pull-right">
+					<span class="glyphicon glyphicon-arrow-right">
+				</button>
+			</a><?php
+		}
+		
+	?></div></div><?php
+	
 	mysql_close();
 ?>
 
