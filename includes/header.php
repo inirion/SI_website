@@ -2,17 +2,16 @@
 	<!-- Header container start -->
 	<div class = "container-fluid">
 
-		<!-- Title or logo of website -->
-		<div class="navbar-heade">
-			<a class="navbar-brand" href="index.php">Home</a>
-		</div>
-		<!-- Hamburger button start -->
-		<button class = "navbar-toggle col-xs-1" data-toggle = "collapse" data-target = " .navHeaderCollapse">
+		<div class="navbar-header">
+			<!-- Hamburger button -->
+			<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<!-- Hamburger button end -->
+		<!-- Title or logo of website -->
+			<a class="navbar-brand" href="index.php">Admin panel</a>
+		</div>
 
 		<!-- Navigation bar start -->
 

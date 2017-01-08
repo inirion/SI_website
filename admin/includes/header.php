@@ -5,21 +5,21 @@ if(!defined('MyConst')) {
 ?>
 <div class="navbar navbar-inverse navbar-static-top">
 	<!-- Header container start -->
-	<div class = "container">
-		<!-- Title or logo of website -->
+	<div class = "container-fluid">
+		
 		<div class="navbar-header">
-			<a class="navbar-brand" href="index.php">Admin panel</a>
-		</div>
-		<!-- Hamburger button start -->
-		<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+			<!-- Hamburger button -->
+			<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<!-- Hamburger button end -->
+		<!-- Title or logo of website -->
+			<a class="navbar-brand" href="index.php">Admin panel</a>
+		</div>
 
 		<!-- Navigation bar start -->
-		<div class="collapse navbar-collapse navHeaderCollapse">
+		<div class="collapse navbar-collapse navHeaderCollapse col-xs-12">
 			<ul class="nav navbar-nav navbar-right">
 				<!--Posts start -->
 				<li>
