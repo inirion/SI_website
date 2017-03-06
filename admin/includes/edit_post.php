@@ -94,7 +94,7 @@ if (isset($_GET['edit_post'])) {
 		<div class="form-group col-sm-12"">
 			<label class="col-md-3 control-label" for="filebutton">File Button</label>
 			<div class="col-md-2">
-				<input id="filebutton" name="filebutton" class="input-file" type="file" required>
+				<input id="filebutton" name="filebutton" class="input-file" type="file">
 
 			</div>
 			<div class="col-md-1">
@@ -139,17 +139,19 @@ if (isset($_GET['edit_post'])) {
 			$post_date = date('j.n.Y');
 			$post_author = htmlentities($_POST['Author'], ENT_QUOTES);
 			$post_keywords = htmlentities($_POST['Keywords'], ENT_QUOTES);
-			$post_image = $_FILES['filebutton']['name'];
-			$post_image_temporary = $_FILES['filebutton']['tmp_name'];
 			$post_content = htmlentities($_POST['Content'], ENT_QUOTES);
 			$post_description = htmlentities($_POST['Description'], ENT_QUOTES);
-
+			
 			if ($post_content == '') {
 				echo "<script>alert('Please fill content text !!')</script>";
 				exit();
 			} else {
+				if (empty($_FILES['filebutton']['name'])) {
+			}else{
+				$post_image = $_FILES['filebutton']['name'];
+				$post_image_temporary = $_FILES['filebutton']['tmp_name'];
 				move_uploaded_file($post_image_temporary, "news_img/$post_image");
-
+			}
 				$update_posts = "update posts set category_id = '$post_category_new',post_title = '$post_title', post_date='$post_date', post_author = '$post_author',
 		post_keywords = '$post_keywords', post_image = '$post_image', post_content = '$post_content', post_description = '$post_description' where post_id = '$update_id'";
 

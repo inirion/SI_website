@@ -7,5 +7,5 @@ if(!defined('MyConst')) {
 <?php
 	mysql_connect("localhost","root","");
 	
-	mysql_select_db("news_site");
+	mysql_select_db("newssite");
 ?>

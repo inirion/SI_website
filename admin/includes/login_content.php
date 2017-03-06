@@ -8,17 +8,25 @@ session_start();
 if(isset($_POST['submit'])){
 	$login = $_POST['Login'];
 	$password = $_POST['Password'];
-	if($login == 'admin' && $password == 'admin'){
+	include ("database.php");
+	$get_info = "Select login, password, isLogged from admin where admin_id = '1'";
+	$run_info = mysql_query($get_info);
+	$info_row = mysql_fetch_array($run_info);
+	if($login == $info_row['login'] && $password == $info_row['password'] && $info_row['isLogged'] == '0'){
 		$_SESSION['user'] = 'admin';
+		$run_info = mysql_query("update admin set isLogged = '1' where admin_id = '1'");
 		echo '<script type="text/javascript">
 		window.location = "../admin/index.php"
 		</script>';
-	}else{
+	}else if($info_row['isLogged'] != '0'){
+		session_destroy();
+		echo '<script>alert("Admin is already logged !!")</script>';
+	}
+	else{
 		session_destroy();
 		echo '<script>alert("Wrong password or login !!")</script>';
-		
 	}
-	
+		mysql_close();
 }
 
 ?>
